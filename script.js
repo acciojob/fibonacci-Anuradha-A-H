@@ -1,12 +1,18 @@
 function fibonacci(num) {
 // your code here
-	let arr = new Array(num+1).fill(0);
-	arr[1] = 1;
-	for(let i = 2;i<=num;i++)
-		{
-			arr[i] = arr[i-1]+arr[i-2];
-		}
-	return arr[num];
+	if (n <= 0) return 0;
+    if (n === 1) return 1;
+
+    let prev2 = 0;
+    let prev1 = 1;
+
+    for (let i = 2; i <= n; i++) {
+        const current = prev1 + prev2;
+        prev2 = prev1;
+        prev1 = current;
+    }
+
+    return prev1;
 	
 }
 
