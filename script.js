@@ -1,7 +1,7 @@
 function fibonacci(num) {
 // your code here
-	if (n <= 0) return 0;
-    if (n === 1) return 1;
+	if (n <= 0) throw new ERROR("Input must be a positive integer");
+    if (n === 1) return 0;
 
     let prev2 = 0;
     let prev1 = 1;
